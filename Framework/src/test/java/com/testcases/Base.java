@@ -40,9 +40,9 @@ public class Base {
 	}
     @Parameters("browser")
 	@BeforeClass
-	public void setUp(String browser) {
-		//driver = BrowserManager.startApp(driver, config.getBrowser(), config.getqaURL());
-		driver = BrowserManager.startApp(driver, browser, config.getqaURL());
+	public void setUp() {
+		driver = BrowserManager.startApp(driver, config.getBrowser(), config.getqaURL());
+		//driver = BrowserManager.startApp(driver, browser, config.getqaURL());
 		System.out.println(driver.getTitle());
 	}
 
